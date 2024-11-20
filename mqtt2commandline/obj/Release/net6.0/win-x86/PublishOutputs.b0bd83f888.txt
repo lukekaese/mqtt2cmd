@@ -1,0 +1,2 @@
+C:\Git\mqtt2comandline\mqtt2commandline\mqtt2commandline\bin\Release\net6.0\publish\win-x86\mqtt2commandline.pdb
+C:\Git\mqtt2comandline\mqtt2commandline\mqtt2commandline\bin\Release\net6.0\publish\win-x86\mqtt2commandline.exe
