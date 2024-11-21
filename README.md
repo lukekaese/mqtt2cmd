@@ -32,7 +32,7 @@ After building the project, you can use the created executable to send a JSON me
 
 Run the program with the following arguments:
 ```bash
-mqtt2commandline_<version>.exe  --server  <server-address>  --topic  <MQTT-topic>  --message  <JSON-message>
+mqtt2cmd_<version>.exe  --server  <server-address>  --topic  <MQTT-topic>  --message  <JSON-message>
 ```
 ### Parameters
 -  `--server` or `-s`: The address of the MQTT server, e.g., `127.0.0.1`.
@@ -45,7 +45,7 @@ mqtt2commandline_<version>.exe  --server  <server-address>  --topic  <MQTT-topic
 
 #### Sending simple Text
 ```bash
-mqtt2commandline.exe  --server  127.0.0.1  --topic  esb01/LED/1  --message  "red"
+mqtt2cmd_<version>.exe  --server  127.0.0.1  --topic  esb01/LED/1  --message  "red"
 ```
 
 This command sends the JSON message `red` to the topic `esb01/LED/1` on the specified MQTT server (localhost).
@@ -53,7 +53,7 @@ This command sends the JSON message `red` to the topic `esb01/LED/1` on the spec
 
 #### Sending a JSON
 ```bash
-mqtt2commandline.exe  --server  127.0.0.1  --topic  esb01/LED/1  --message  "{\"color\":{\"hex\":\"#FF0000\"}}"
+mqtt2cmd_<version>.exe  --server  127.0.0.1  --topic  esb01/LED/1  --message  "{\"color\":{\"hex\":\"#FF0000\"}}"
 ```
 
 This command sends the JSON message `{"color":{"hex":"#FF0000"}}` to the topic `esb01/LED/1` on the specified MQTT server (localhost).
