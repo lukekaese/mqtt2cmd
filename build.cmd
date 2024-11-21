@@ -7,6 +7,8 @@ echo.
 echo PATH
 echo %PATH%
 set OUT=%cd%\.out\
+for /f %%i in ('git describe --tags --long --always') do set v=%%i
+echo %v% 
 
 echo "Creating space for sacret computation"
 if not exist .out mkdir .out
@@ -20,9 +22,11 @@ dotnet publish mqtt2commandline.sln -r win-x86 --self-contained true -c release 
 popd
 
 
-set outArchive=%OUT%\mqtt2commandline.zip
+set outArchive=%OUT%\mqtt2commandline_%v%.zip
 pushd .\Solution\bin\Release\net6.0\win-x86\publish
-powershell Compress-Archive .\mqtt2commandline.exe -Update %outArchive% || exit 1
+
+MOVE .\mqtt2commandline.exe .\mqtt2commandline_%v%.exe || exit 1
+powershell Compress-Archive .\mqtt2commandline_%v%.exe -Update %outArchive% || exit 1
 
 
 
